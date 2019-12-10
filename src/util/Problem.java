@@ -20,7 +20,7 @@ public abstract class Problem {
     }
     
     protected List<String> readInput() throws IOException {
-        String pName = getProblemName().toLowerCase().substring(0, 2);
+        String pName = getProblemName().toLowerCase().substring(0, getProblemName().length() - 1);
         return Files.readAllLines(Paths.get("input/" + pName + "/input"));
     }
     
